@@ -1,8 +1,8 @@
 # Evaluating GPT-5 on Indian-BhED
 
-This repo evaluates GPT-5 on Indian-BhED. See [Indian-BhED paper](https://arxiv.org/abs/2309.08573).
+This repo evaluates GPT-5 and ChatGPT-4o on Indian-BhED. See [Indian-BhED paper](https://arxiv.org/abs/2309.08573).
 
-TLDR: view the eval run [here](https://chojeq.com/caste-bias-gpt-5/#/logs/2025-08-14T08-40-18-07-00_indian-bhed_NgdfWD84tCbXEyseBCci5e.eval) and the results CSV [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/indian_bhed/results.csv).
+TLDR: view the eval runs [here](https://chojeq.com/caste-bias-gpt-5/) and the results CSV [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/indian_bhed/results/). See the comparison doc [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/gpt5-comparison.md/).
 
 ## Usage
 
@@ -25,13 +25,15 @@ Then run the eval
 ```bash
 cd indian_bhed
 inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest
+inspect eval indian_bhed.py --model=openai/chatgpt-4o-latest
 
 # if you have higher tiers
 inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=200
+inspect eval indian_bhed.py --model=openai/chatgpt-4o-latest --max-connections=200
 ```
 
 ## Dataset
-`caste.csv` is from [Indian-BhED repo](https://github.com/khyatikhandelwal/Indian-LLMs-Bias/blob/main/Data/Caste.csv).
+`indian_bhed/caste.csv` is from [Indian-BhED repo](https://github.com/khyatikhandelwal/Indian-LLMs-Bias/blob/main/Data/Caste.csv).
 
 ## Results
 
@@ -69,11 +71,11 @@ inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=2
 
 ## Artifacts
 
-You can read the logs [online]() or with
+You can read the logs [online](https://chojeq.com/caste-bias-gpt-5/) or with
 
 ```
 # run this at the root folder
 inspect view --log-dir ./public_logs
 ```
 
-You can also get a CSV summary of results at `indian_bhed/results.csv`.
+You can also get a CSV summary of results at `indian_bhed/results/`.

@@ -1,4 +1,21 @@
 {
+  "2025-08-14T11-51-15-07-00_indian-bhed_ZMSVGLf8VCzfEVNPnMJiF9.eval": {
+    "eval_id": "KPrWa6MAubMkPCGRuew4pA",
+    "run_id": "FPatbkRdfNP4xKRYFiZRfv",
+    "task": "indian_bhed",
+    "task_id": "ZMSVGLf8VCzfEVNPnMJiF9",
+    "task_version": 0,
+    "version": 2,
+    "status": "success",
+    "model": "openai/chatgpt-4o-latest",
+    "started_at": "2025-08-14T11:51:15-07:00",
+    "completed_at": "2025-08-14T11:58:57-07:00",
+    "primary_metric": {
+      "name": "mean",
+      "value": 0.7619047619047619,
+      "params": {}
+    }
+  },
   "2025-08-14T08-40-18-07-00_indian-bhed_NgdfWD84tCbXEyseBCci5e.eval": {
     "eval_id": "ksoCwNbsmU3YnmT3ugHSKU",
     "run_id": "T6ig7oR6V7a39zStBaHjC6",
