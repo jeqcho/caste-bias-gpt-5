@@ -2,6 +2,8 @@
 
 This repo evaluates GPT-5 on Indian-BhED. See [Indian-BhED paper](https://arxiv.org/abs/2309.08573).
 
+TLDR: view the eval run [here](https://chojeq.com/caste-bias-gpt-5/#/logs/2025-08-14T08-40-18-07-00_indian-bhed_NgdfWD84tCbXEyseBCci5e.eval) and the results CSV [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/indian_bhed/results.csv).
+
 ## Usage
 
 First create a `.env` file in the root folder with the OpenAI key
@@ -67,7 +69,7 @@ inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=2
 
 ## Artifacts
 
-You can read the logs with
+You can read the logs [online]() or with
 
 ```
 # run this at the root folder
