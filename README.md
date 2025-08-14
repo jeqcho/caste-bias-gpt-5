@@ -23,7 +23,7 @@ Then run the eval
 ```bash
 inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest
 
-# if you can afford higher tiers
+# if you have higher tiers
 inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=200
 ```
 
