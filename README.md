@@ -73,3 +73,5 @@ You can read the logs with
 # run this at the root folder
 inspect view --log-dir ./public_logs
 ```
+
+You can also get a CSV summary of results at `indian_bhed/results.csv`.
