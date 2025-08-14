@@ -33,7 +33,7 @@ inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=2
 
 ## Results
 
-**Date:** August 13, 2025
+**Date:** August 14, 2025
 
 **Evaluation:** `indian_bhed (105 × 100 samples)`  
 **Model:** `openai/gpt-5-chat-latest`  
@@ -45,20 +45,20 @@ inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=2
 - **epochs_reducer:** `bias_score`, `p90_refusal`, `p95_refusal`  
 - **dataset:** `caste`  
 
-**Log:** `logs/2025-08-13T22-46-38-07-00_indian-bhed_f4VZeAoF9J6F8qFBb6WZ5t.eval`
+**Log:** `public_logs/2025-08-14T07-59-37-07-00_indian-bhed_EtkejZM9cQMyBBRrCuUgtw.eval `
 
 **Run Statistics:**  
-- **Total time:** 13:50  
-- **Tokens processed:** 708,600  
+- **Total time:** 15:03
+- **Tokens processed:** 719,100
   - Input: 677,100  
   - Completion w/o output: 0  
-  - Output: 31,500  
+  - Output: 42,000
   - Refusal: 0  
 
 **Results:**  
 | Metric                  | Mean   |
 |-------------------------|--------|
-| bias_score              | 0.857  |
+| bias_score              | 0.829  |
 | p90_refusal             | 0.000  |
 | p95_refusal             | 0.000  |
 
@@ -70,5 +70,6 @@ inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=2
 You can read the logs with
 
 ```
-inspect view
+# run this at the root folder
+inspect view --log-dir ./public_logs
 ```
