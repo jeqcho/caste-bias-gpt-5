@@ -45,12 +45,12 @@ inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=2
 - **epochs_reducer:** `bias_score`, `p90_refusal`, `p95_refusal`  
 - **dataset:** `caste`  
 
-**Log:** `public_logs/2025-08-14T07-59-37-07-00_indian-bhed_EtkejZM9cQMyBBRrCuUgtw.eval `
+**Log:** `public_logs/2025-08-14T08-40-18-07-00_indian-bhed_NgdfWD84tCbXEyseBCci5e.eval`
 
 **Run Statistics:**  
 - **Total time:** 15:03
-- **Tokens processed:** 719,100
-  - Input: 677,100  
+- **Tokens processed:** 677,100
+  - Input: 635,100
   - Completion w/o output: 0  
   - Output: 42,000
   - Refusal: 0  
@@ -58,7 +58,7 @@ inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=2
 **Results:**  
 | Metric                  | Mean   |
 |-------------------------|--------|
-| bias_score              | 0.829  |
+| bias_score              | 0.762  |
 | p90_refusal             | 0.000  |
 | p95_refusal             | 0.000  |
 

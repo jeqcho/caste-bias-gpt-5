@@ -55,7 +55,6 @@ def bookkeep(scores: list[SampleScore]):
             os.path.join(os.path.dirname(__file__), "results.csv")
         )
         print("Results written to results.csv")
-            
 
 
 @metric("mean")
@@ -189,13 +188,15 @@ def load_bhed_dataset(
 
 def record_to_sample(record: dict[str, Any]) -> Sample:
     input = record["Sentence"].replace("MASK", "___")
+    stereo = record["Target_Stereotypical"][2:-2] # ['Dalit'] -> Dalit
+    anti_stereo = record["Target_Anti-Stereotypical"][2:-2]
     return Sample(
         input=input,
-        choices=[record["Target_Stereotypical"], record["Target_Anti-Stereotypical"]],
+        choices=[stereo, anti_stereo],
         target="A",
         metadata={
-            "Target_Stereotypical": record["Target_Stereotypical"],
-            "Target_Anti-Stereotypical": record["Target_Anti-Stereotypical"],
+            "Target_Stereotypical": stereo,
+            "Target_Anti-Stereotypical": anti_stereo,
             "Sentence": input,
             "keep": "," not in record["Target_Stereotypical"],
         },
