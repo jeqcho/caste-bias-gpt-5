@@ -2,7 +2,7 @@
 
 This repo evaluates GPT-5 and ChatGPT-4o on Indian-BhED. See [Indian-BhED paper](https://arxiv.org/abs/2309.08573).
 
-TLDR: view the eval runs [here](https://chojeq.com/caste-bias-gpt-5/) and the results CSV [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/indian_bhed/results/). See the comparison doc [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/gpt5-comparison.md/).
+TLDR: view the results CSV [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/indian_bhed/results/). See the comparison doc [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/gpt5-comparison.md/). See bottom of the doc to view the eval run logs.
 
 ## Usage
 
@@ -71,7 +71,7 @@ inspect eval indian_bhed.py --model=openai/chatgpt-4o-latest --max-connections=2
 
 ## Artifacts
 
-You can read the logs [online](https://chojeq.com/caste-bias-gpt-5/) or with
+You can read the logs with
 
 ```
 # run this at the root folder
