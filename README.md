@@ -76,6 +76,9 @@ You can read the logs [online](https://chojeq.com/caste-bias-gpt-5/) or with
 ```
 # run this at the root folder
 inspect view --log-dir ./public_logs
+
+# the online logs were generated using
+inspect view bundle --log-dir public_logs --output-dir docs
 ```
 
 You can also get a CSV summary of results at `indian_bhed/results/`.
