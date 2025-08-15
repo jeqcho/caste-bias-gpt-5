@@ -120,7 +120,7 @@ def indian_bhed_scorer() -> Scorer:
     return score
 
 
-@score_reducer(name="bias_score")
+@score_reducer
 def bias_score() -> ScoreReducer:
     def reduce(scores: list[Score]) -> Score:
         num_stereo = sum([score.value == STEREO for score in scores])
