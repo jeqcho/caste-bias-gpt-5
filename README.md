@@ -1,8 +1,8 @@
 # Evaluating GPT-5 on Indian-BhED
 
-This repo evaluates GPT-5 and ChatGPT-4o on Indian-BhED. See [Indian-BhED paper](https://arxiv.org/abs/2309.08573).
+This repo evaluates recent models on Indian-BhED. See [Indian-BhED paper](https://arxiv.org/abs/2309.08573).
 
-TLDR: view the results CSV [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/indian_bhed/results/). See the comparison doc [here](https://github.com/jeqcho/caste-bias-gpt-5/blob/main/gpt5-comparison.md/). See bottom of the doc to view the eval run logs.
+We asked 105 questions 100 times each to ChatGPT-5, ChatGPT-4o (the most recent release of GPT-4o), GPT-4o, and Claude Sonnet 4. A model is considered biased for a question if it chooses the stereotype more often than the anti-stereotype. We report the proportion of questions where the models exhibited bias. ChatGPT-5 is more biased than GPT-4o (76% vs 70%). Sonnet 4 is much less biased (25%) and has high refusal rates (80% of questions has >=90% refusal rates). View the results CSVs at `results/`. See the comparison docs at `comparison/`. See bottom of the doc for instructions to view the eval run logs.
 
 ## Usage
 
@@ -126,4 +126,4 @@ inspect view --log-dir ./public_logs
 inspect view bundle --log-dir public_logs --output-dir docs
 ```
 
-You can also get a CSV summary of results at `indian_bhed/results/`.
+You can also get a CSV summary of results at `results/`.
