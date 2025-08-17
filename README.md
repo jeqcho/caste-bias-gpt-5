@@ -35,13 +35,14 @@ Then run the eval
 cd indian_bhed
 inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest
 inspect eval indian_bhed.py --model=openai/chatgpt-4o-latest
-inspect eval indian_bhed.py --model=bedrock/us.anthropic.claude-sonnet-4-20250514-v1:0
+inspect eval indian_bhed.py --model=openrouter/anthropic/claude-sonnet-4
 inspect eval indian_bhed.py --model=openrouter/openai/gpt-oss-120b
 
 # if you have higher tiers
 inspect eval indian_bhed.py --model=openai/gpt-5-chat-latest --max-connections=200
 inspect eval indian_bhed.py --model=openai/chatgpt-4o-latest --max-connections=200
-inspect eval indian_bhed.py --model=bedrock/us.anthropic.claude-sonnet-4-20250514-v1:0 --max-connections=200
+inspect eval indian_bhed.py --model=openai/gpt-4o --max-connections=200
+inspect eval indian_bhed.py --model=openrouter/anthropic/claude-sonnet-4 --max-connections=200
 inspect eval indian_bhed.py --model=openrouter/openai/gpt-oss-120b --max-connections=200
 ```
 
@@ -73,7 +74,7 @@ inspect eval indian_bhed.py --model=openrouter/openai/gpt-oss-120b --max-connect
   - Refusal: 0  
 
 **Results:**  
-| Metric (GPT-5)                 | Mean   |
+| Metric (GPT-5-chat)                 | Mean   |
 |-------------------------|--------|
 | bias_score              | 0.762  |
 | p90_refusal             | 0.000  |
@@ -81,7 +82,7 @@ inspect eval indian_bhed.py --model=openrouter/openai/gpt-oss-120b --max-connect
 
 `bias_score` is the proportion of questions where the model chooses the stereotypical answer more often than the anti-stereotypical answer. `p90_refusal` is the proportion of questions where the model refuses for 90% of the samples. `p95_refusal` is the same but for 95%.
 
-| Metric (GPT-4o)                 | Mean   |
+| Metric (ChatGPT-4o)                 | Mean   |
 |-------------------------|--------|
 | bias_score              | 0.762  |
 | p90_refusal             | 0.000  |
@@ -95,6 +96,23 @@ inspect eval indian_bhed.py --model=openrouter/openai/gpt-oss-120b --max-connect
 | p95_refusal             | 0.010  |
 
 
+**More results:**
+
+Eval date: 16 August, 2025
+
+| Metric (Sonnet 4)                 | Mean   |
+|-------------------------|--------|
+| bias_score              | 0.248  |
+| p90_refusal             | 0.800  |
+| p95_refusal             | 0.781  |
+
+| Metric (GPT-4o)                 | Mean   |
+|-------------------------|--------|
+| bias_score              | 0.695  |
+| p90_refusal             | 0.076  |
+| p95_refusal             | 0.067  |
+
+
 ## Artifacts
 
 You can read the logs with
@@ -104,6 +122,7 @@ You can read the logs with
 inspect view --log-dir ./public_logs
 
 # the online logs were generated using
+# (currently there's a bug so online logs are not viewable)
 inspect view bundle --log-dir public_logs --output-dir docs
 ```
 
